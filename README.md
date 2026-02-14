@@ -70,6 +70,8 @@ graph TD
 ## 📸 Screenshots
 
 | Login Screen | Register Screen | Home Screen |
+![Uploading Screenshot from 2026-02-14 20-04-55.png…]()
+
 |:---:|:---:|:---:|
 <img width="250" height="657" alt="Screenshot from 2026-02-14 20-03-08" src="https://github.com/user-attachments/assets/fd8a52f6-45f8-49ca-ab6e-03b5f5912114" />
 
