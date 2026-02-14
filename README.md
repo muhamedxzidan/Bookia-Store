@@ -71,6 +71,8 @@ graph TD
 
 | Login Screen | Register Screen | Home Screen |
 |:---:|:---:|:---:|
+<img width="250" height="657" alt="Screenshot from 2026-02-14 20-03-08" src="https://github.com/user-attachments/assets/fd8a52f6-45f8-49ca-ab6e-03b5f5912114" />
+
 | ![Login](assets/screenshots/login.png) | ![Register](assets/screenshots/register.png) | ![Home](assets/screenshots/home.png) |
 
 *(Note: Add screenshots to `assets/screenshots/` folder to display them here.)*
