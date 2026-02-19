@@ -1,3 +1,6 @@
 {
-  "title": "Bookia Store"
+  "title": "Bookia Store",
+  "order_book_now": "Order Your Book Now!",
+  "login": "Login",
+  "register": "Register"
 }
