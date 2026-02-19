@@ -25,6 +25,12 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<String> get values => [back, logo, sucsses];
+
+  String get eye => 'assets/icons/eye.svg';
+
+  String get google => 'assets/icons/google.svg';
+
+  String get apple => 'assets/icons/apple.svg';
 }
 
 class $AssetsImagesGen {

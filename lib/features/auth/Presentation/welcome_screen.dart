@@ -1,6 +1,7 @@
 import 'package:bookia_store/core/theme/app_colors.dart';
+import 'package:bookia_store/core/theme/app_strings.dart';
 import 'package:bookia_store/core/utils/assets.gen.dart';
-import 'package:bookia_store/core/widgets/app_butoom.dart';
+import 'package:bookia_store/core/share_widgets/app_butoom.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -25,7 +26,7 @@ class WelcomeScreen extends StatelessWidget {
           Image(image: Assets.images.logo.image().image),
           SizedBox(height: 20.h),
           Text(
-            'Order Your Book Now!',
+            AppStrings.orderBookNow,
             style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
           ),
           const Spacer(),
@@ -34,7 +35,7 @@ class WelcomeScreen extends StatelessWidget {
             child: AppButton(
               onPressed: () {},
               color: AppColors.primaryColor,
-              title: 'Login',
+              title: AppStrings.login,
             ),
           ),
           SizedBox(height: 15.h),
@@ -43,7 +44,7 @@ class WelcomeScreen extends StatelessWidget {
             child: AppButton(
               onPressed: () {},
               color: AppColors.secondaryColor,
-              title: 'Register',
+              title: AppStrings.register,
             ),
           ),
           SizedBox(height: 94.h),

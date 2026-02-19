@@ -1,6 +1,7 @@
 import 'package:bookia_store/core/utils/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class AppButtonBack extends StatelessWidget {
   const AppButtonBack({super.key});
@@ -15,7 +16,9 @@ class AppButtonBack extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(12.r),
       ),
-      child: Center(child: Image.asset(Assets.icons.back)),
+      child: Center(
+        child: SvgPicture.asset(Assets.icons.back, width: 24.w, height: 24.h),
+      ),
     ),
   );
 }

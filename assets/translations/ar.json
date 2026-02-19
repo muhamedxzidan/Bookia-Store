@@ -2,5 +2,9 @@
   "title": "مكتبة بوكيا",
   "order_book_now": "احجز كتابك الآن",
   "login": "تسجيل الدخول",
-  "register": "انشاء حساب"
+  "register": "انشاء حساب",
+  "forgot_password": "نسيت كلمة المرور؟",
+  "login_with_google": "تسجيل الدخول باستخدام جوجل",
+  "or": "أو",
+  "login_with_apple": "تسجيل الدخول باستخدام آبل"
 }
