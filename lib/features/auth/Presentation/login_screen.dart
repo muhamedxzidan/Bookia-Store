@@ -21,58 +21,92 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) => SafeArea(
     child: Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 22.w, vertical: 22.h),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const AppButtonBack(),
-            SizedBox(height: 29.h),
-            Text(
-              AppStrings.titleLogin,
-              style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 32.h),
-            const AppTextFormFild(hintText: AppStrings.hintTextEmail),
-            SizedBox(height: 15.h),
-            AppTextFormFild(
-              hintText: AppStrings.hintTextPassword,
-              obscureText: isPassword,
-              svgPicture: SvgPicture.asset(Assets.icons.eye),
-            ),
-            SizedBox(height: 13.h),
-            TextButton(
-              onPressed: () {},
-              child: const Text(AppStrings.forgotPassword),
-            ),
-            SizedBox(height: 13.h),
-            AppButton(
-              onPressed: () {},
-              color: AppColors.primaryColor,
-              title: AppStrings.login,
-            ),
-            SizedBox(height: 34.h),
-            const Divider(),
-            const Center(child: Text(AppStrings.or)),
-            SizedBox(height: 34.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset(Assets.icons.google),
-                SizedBox(width: 10.w),
-                const Text(AppStrings.loginWithGoogle),
-              ],
-            ),
-            SizedBox(height: 34.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset(Assets.icons.apple),
-                SizedBox(width: 10.w),
-                const Text(AppStrings.loginWithApple),
-              ],
-            ),
-          ],
+      backgroundColor: Colors.white,
+      // resizeToAvoidBottomInset: false,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 22.w, vertical: 22.h),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const AppButtonBack(),
+              SizedBox(height: 29.h),
+              Text(
+                AppStrings.titleLogin,
+                style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 32.h),
+              AppTextFormFild(
+                color: AppColors.hintTextColor,
+                hintText: AppStrings.hintTextEmail,
+              ),
+              SizedBox(height: 15.h),
+              AppTextFormFild(
+                color: AppColors.hintTextColor,
+                hintText: AppStrings.hintTextPassword,
+                obscureText: isPassword,
+                isPassword: isPassword,
+                svgPicture: SvgPicture.asset(Assets.icons.eye),
+              ),
+              SizedBox(height: 13.h),
+              TextButton(
+                onPressed: () {},
+                child: const Text(AppStrings.forgotPassword),
+              ),
+              SizedBox(height: 13.h),
+              AppButton(
+                onPressed: () {},
+                color: AppColors.primaryColor,
+                title: AppStrings.login,
+              ),
+              SizedBox(height: 34.h),
+              const Divider(),
+              const Center(child: Text(AppStrings.or)),
+              SizedBox(height: 34.h),
+              InkWell(
+                onTap: () {},
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(Assets.icons.google),
+                    SizedBox(width: 10.w),
+                    const Text(AppStrings.loginWithGoogle),
+                  ],
+                ),
+              ),
+              SizedBox(height: 34.h),
+              InkWell(
+                onTap: () {},
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(Assets.icons.apple),
+                    SizedBox(width: 10.w),
+                    const Text(AppStrings.loginWithApple),
+                  ],
+                ),
+              ),
+
+              SizedBox(height: 34.h),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(AppStrings.dontHaveAccount),
+                  ),
+                  const Text(
+                    AppStrings.registerNow,
+                    style: TextStyle(
+                      color: AppColors.primaryColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     ),

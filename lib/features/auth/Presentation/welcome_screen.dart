@@ -2,6 +2,7 @@ import 'package:bookia_store/core/theme/app_colors.dart';
 import 'package:bookia_store/core/theme/app_strings.dart';
 import 'package:bookia_store/core/utils/assets.gen.dart';
 import 'package:bookia_store/core/share_widgets/app_butoom.dart';
+import 'package:bookia_store/features/auth/Presentation/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -33,7 +34,13 @@ class WelcomeScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 22.w),
             child: AppButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  // ignore: inference_failure_on_instance_creation
+                  MaterialPageRoute(builder: (context) => const LoginScreen()),
+                );
+              },
               color: AppColors.primaryColor,
               title: AppStrings.login,
             ),

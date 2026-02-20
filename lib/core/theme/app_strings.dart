@@ -11,4 +11,6 @@ class AppStrings {
   static const String or = 'or';
 
   static const String loginWithApple = 'Sign in with Apple';
+  static const String dontHaveAccount = "Don’t have an account?";
+  static const String registerNow = "Register Now";
 }

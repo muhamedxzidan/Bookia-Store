@@ -6,5 +6,7 @@
   "forgot_password": "نسيت كلمة المرور؟",
   "login_with_google": "تسجيل الدخول باستخدام جوجل",
   "or": "أو",
-  "login_with_apple": "تسجيل الدخول باستخدام آبل"
+  "login_with_apple": "تسجيل الدخول باستخدام آبل",
+  "dont_have_account": "ليس لديك حساب؟",
+  "register_now": "سجل الان"
 }
