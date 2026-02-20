@@ -13,4 +13,13 @@ class AppStrings {
   static const String loginWithApple = 'Sign in with Apple';
   static const String dontHaveAccount = "Don’t have an account?";
   static const String registerNow = "Register Now";
+  static const String titleRegister = "Hello! Register to get started";
+  static const String hintTextUserName = "Username";
+  static const String hintTextConfirmPassword = "Confirm Password";
+  static const String hintTextAlreadyHaveAccount = "Already have an account? ";
+  static const String hintTextForgotPassword = "Forgot Password?";
+  static const String hintTextdescriptionForgotPassword =
+      "Don't worry! It occurs. Please enter the email address linked with your account.";
+  static const String sendCode = "Send Code";
+  static const String rememberPassword = "Remember Password?";
 }

@@ -2,34 +2,37 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-// ignore: must_be_immutable
 class AppTextFormFild extends StatefulWidget {
-  AppTextFormFild({
+  const AppTextFormFild({
     super.key,
     required this.hintText,
     this.svgPicture,
-    this.obscureText = false,
     this.color,
     this.isPassword = false,
   });
 
   final String hintText;
   final SvgPicture? svgPicture;
-  final bool obscureText;
   final Color? color;
-  bool isPassword;
+  final bool isPassword;
 
   @override
   State<AppTextFormFild> createState() => _AppTextFormFildState();
 }
 
 class _AppTextFormFildState extends State<AppTextFormFild> {
+  bool obscureText = true;
   @override
   Widget build(BuildContext context) => TextFormField(
+    keyboardType: widget.isPassword
+        ? TextInputType.visiblePassword
+        : TextInputType.emailAddress,
+    autovalidateMode: AutovalidateMode.onUserInteraction,
     onTapOutside: (event) {
       FocusScope.of(context).unfocus();
     },
-    obscureText: widget.obscureText,
+
+    obscureText: widget.isPassword && obscureText,
 
     decoration: InputDecoration(
       fillColor: widget.color,
@@ -39,7 +42,7 @@ class _AppTextFormFildState extends State<AppTextFormFild> {
       suffixIcon: InkWell(
         onTap: () {
           setState(() {
-            widget.isPassword = !widget.isPassword;
+            obscureText = !obscureText;
           });
         },
         child: Padding(

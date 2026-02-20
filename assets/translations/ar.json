@@ -8,5 +8,13 @@
   "or": "أو",
   "login_with_apple": "تسجيل الدخول باستخدام آبل",
   "dont_have_account": "ليس لديك حساب؟",
-  "register_now": "سجل الان"
+  "register_now": "سجل الان",
+  "title_register": "مرحبا! سجل للبدء",
+  "hint_text_user_name": "اسم المستخدم",
+  "hint_text_confirm_password": "تأكيد كلمة المرور",
+  "hint_text_already_have_account": "لديك حساب بالفعل؟",
+  "hint_text_forgot_password": "نسيت كلمة المرور؟",
+  "hint_text_description_forgot_password": "لا تقلق! يحدث هذا. يرجى إدخال عنوان البريد الإلكتروني المرتبط بحسابك.",
+  "send_code": "ارسال الرمز",
+  "remember_password": "تذكر كلمة المرور؟"
 }

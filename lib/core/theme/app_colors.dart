@@ -5,4 +5,5 @@ class AppColors {
   static const Color secondaryColor = Color(0xFFF7F8F9);
   static const Color accentColor = Color(0xFF1A1A1A);
   static const Color hintTextColor = Color(0xffE8ECF4);
+  static const Color hintTextDescriptionColor = Color(0xff8391A1);
 }

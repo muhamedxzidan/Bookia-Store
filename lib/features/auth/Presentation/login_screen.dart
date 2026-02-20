@@ -4,6 +4,8 @@ import 'package:bookia_store/core/theme/app_colors.dart';
 import 'package:bookia_store/core/theme/app_strings.dart';
 import 'package:bookia_store/core/share_widgets/app_butoom_back.dart';
 import 'package:bookia_store/core/utils/assets.gen.dart';
+import 'package:bookia_store/features/auth/Presentation/forgot_password.dart';
+import 'package:bookia_store/features/auth/Presentation/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -36,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 32.h),
-              AppTextFormFild(
+              const AppTextFormFild(
                 color: AppColors.hintTextColor,
                 hintText: AppStrings.hintTextEmail,
               ),
@@ -44,13 +46,20 @@ class _LoginScreenState extends State<LoginScreen> {
               AppTextFormFild(
                 color: AppColors.hintTextColor,
                 hintText: AppStrings.hintTextPassword,
-                obscureText: isPassword,
-                isPassword: isPassword,
+                isPassword: isPassword = true,
                 svgPicture: SvgPicture.asset(Assets.icons.eye),
               ),
               SizedBox(height: 13.h),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    // ignore: inference_failure_on_instance_creation
+                    MaterialPageRoute(
+                      builder: (context) => const ForgotPassword(),
+                    ),
+                  );
+                },
                 child: const Text(AppStrings.forgotPassword),
               ),
               SizedBox(height: 13.h),
@@ -93,7 +102,15 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        // ignore: inference_failure_on_instance_creation
+                        MaterialPageRoute(
+                          builder: (context) => const RegisterScreen(),
+                        ),
+                      );
+                    },
                     child: const Text(AppStrings.dontHaveAccount),
                   ),
                   const Text(
