@@ -74,17 +74,15 @@ graph TD
 <img width="387" height="715" alt="Screenshot from 2026-02-21 03-07-00" src="https://github.com/user-attachments/assets/2c0694e6-db31-4a97-98d4-c9c7770ad223" />
 <img width="388" height="721" alt="Screenshot from 2026-02-21 03-06-17" src="https://github.com/user-attachments/assets/86ff0907-b9c5-4464-950e-3d988160aac7" />
 <img width="385" height="717" alt="Screenshot from 2026-02-21 03-05-35" src="https://github.com/user-attachments/assets/d193c066-f082-4436-9c81-d250198b6d42" />
+<img width="387" height="713" alt="Screenshot from 2026-02-21 03-11-18" src="https://github.com/user-attachments/assets/07a3e064-4467-4ec7-b926-3c0cbb4432bc" />
 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/e7bc12bf-dee3-470c-afe4-8e73fe5a21ad" width="250" />
-  <img src="https://github.com/user-attachments/assets/674e699c-8abd-45f0-817b-9347b252ebb7" width="250" />
   <img src="https://github.com/user-attachments/assets/4212e914-0a48-43c8-a683-06e62c541e1a" width="250" />
 </p>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4f09644c-0968-4c62-8b10-be3738e061ae" width="250" />
-  <img src="https://github.com/user-attachments/assets/0f69f787-a74f-44bc-84db-b66e5f9c9401" width="250" />
-  <img src="https://github.com/user-attachments/assets/22acbfeb-a84a-4f2f-8e04-95e94fe29cc2" width="250" />
+
 </p>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/fd8a52f6-45f8-49ca-ab6e-03b5f5912114" width="250" />
