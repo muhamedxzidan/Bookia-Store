@@ -75,51 +75,54 @@ graph TD
 
 Experience the complete authentication journey with our polished UI:
 
-#### 🎯 Authentication Steps (1 → 6)
-
-![WhatsApp Image 2026-02-20 at 1 56 57 AM](https://github.com/user-attachments/assets/b84b4785-98af-40f9-92fa-1632a740347d)
-<img width="388" height="720" alt="Screenshot from 2026-02-21 03-32-07" src="https://github.com/user-attachments/assets/c875ed90-0c10-49d8-9df0-b2cb63d58199" />
-
-
+#### 🎯 Authentication Steps (1 → 8)
 
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/48f765e4-9b93-400d-9e9f-181fc94a9a5b" width="220" alt="Auth Step 1" />
+      <img src="https://github.com/user-attachments/assets/b84b4785-98af-40f9-92fa-1632a740347d" width="220" alt="Auth Step 1" />
       <br/>
-      <sub><b>Step 1 · Password Changed!</b></sub>
+      <sub><b>Step 1 · Splash Screen</b></sub>
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/ae1bcd8a-71e9-42c4-9279-72b911fd0076" width="220" alt="Auth Step 2" />
+      <img src="https://github.com/user-attachments/assets/07a3e064-4467-4ec7-b926-3c0cbb4432bc" width="220" alt="Auth Step 2" />
       <br/>
-      <sub><b>Step 2 · Create new password</b></sub>
+      <sub><b>Step 2 · Welcome</b></sub>
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/2c0694e6-db31-4a97-98d4-c9c7770ad223" width="220" alt="Auth Step 3" />
+      <img src="https://github.com/user-attachments/assets/c875ed90-0c10-49d8-9df0-b2cb63d58199" width="220" alt="Auth Step 3" />
       <br/>
-      <sub><b>Step 3 · OTP Verification </b></sub>
+      <sub><b>Step 3 · Login</b></sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/d193c066-f082-4436-9c81-d250198b6d42" width="220" alt="Auth Step 4" />
+      <br/>
+      <sub><b>Step 4 · Register</b></sub>
     </td>
   </tr>
 </table>
 
-#### 🔑 Recovery Flow
-
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/86ff0907-b9c5-4464-950e-3d988160aac7" width="220" alt="Auth Step 4" />
+      <img src="https://github.com/user-attachments/assets/86ff0907-b9c5-4464-950e-3d988160aac7" width="220" alt="Auth Step 5" />
       <br/>
-      <sub><b>Step 4 · Forgot Password</b></sub>
+      <sub><b>Step 5 · Forgot Password</b></sub>
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/d193c066-f082-4436-9c81-d250198b6d42" width="220" alt="Auth Step 5" />
+      <img src="https://github.com/user-attachments/assets/2c0694e6-db31-4a97-98d4-c9c7770ad223" width="220" alt="Auth Step 6" />
       <br/>
-      <sub><b>Step 5 · Register</b></sub>
+      <sub><b>Step 6 · OTP Verification</b></sub>
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/07a3e064-4467-4ec7-b926-3c0cbb4432bc" width="220" alt="Auth Step 6" />
+      <img src="https://github.com/user-attachments/assets/ae1bcd8a-71e9-42c4-9279-72b911fd0076" width="220" alt="Auth Step 7" />
       <br/>
-      <sub><b>Step 6 ·welcome</b></sub>
+      <sub><b>Step 7 · Create New Password</b></sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/48f765e4-9b93-400d-9e9f-181fc94a9a5b" width="220" alt="Auth Step 8" />
+      <br/>
+      <sub><b>Step 8 · Password Changed</b></sub>
     </td>
   </tr>
 </table>
