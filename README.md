@@ -82,17 +82,17 @@ Experience the complete authentication journey with our polished UI:
     <td align="center">
       <img src="https://github.com/user-attachments/assets/48f765e4-9b93-400d-9e9f-181fc94a9a5b" width="220" alt="Auth Step 1" />
       <br/>
-      <sub><b>Step 1 · Welcome</b></sub>
+      <sub><b>Step 1 · Password Changed!</b></sub>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/ae1bcd8a-71e9-42c4-9279-72b911fd0076" width="220" alt="Auth Step 2" />
       <br/>
-      <sub><b>Step 2 · Login</b></sub>
+      <sub><b>Step 2 · Create new password</b></sub>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/2c0694e6-db31-4a97-98d4-c9c7770ad223" width="220" alt="Auth Step 3" />
       <br/>
-      <sub><b>Step 3 · Register</b></sub>
+      <sub><b>Step 3 · OTP Verification </b></sub>
     </td>
   </tr>
 </table>
@@ -109,12 +109,12 @@ Experience the complete authentication journey with our polished UI:
     <td align="center">
       <img src="https://github.com/user-attachments/assets/d193c066-f082-4436-9c81-d250198b6d42" width="220" alt="Auth Step 5" />
       <br/>
-      <sub><b>Step 5 · OTP Verification</b></sub>
+      <sub><b>Step 5 · Register</b></sub>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/07a3e064-4467-4ec7-b926-3c0cbb4432bc" width="220" alt="Auth Step 6" />
       <br/>
-      <sub><b>Step 6 · Create New Password</b></sub>
+      <sub><b>Step 6 ·welcome</b></sub>
     </td>
   </tr>
 </table>
