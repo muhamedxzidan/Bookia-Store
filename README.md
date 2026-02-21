@@ -69,6 +69,13 @@ graph TD
 
 ## 📸 Screenshots
 
+<img width="390" height="720" alt="Screenshot from 2026-02-21 03-07-53" src="https://github.com/user-attachments/assets/48f765e4-9b93-400d-9e9f-181fc94a9a5b" />
+<img width="387" height="716" alt="Screenshot from 2026-02-21 03-07-28" src="https://github.com/user-attachments/assets/ae1bcd8a-71e9-42c4-9279-72b911fd0076" />
+<img width="387" height="715" alt="Screenshot from 2026-02-21 03-07-00" src="https://github.com/user-attachments/assets/2c0694e6-db31-4a97-98d4-c9c7770ad223" />
+<img width="388" height="721" alt="Screenshot from 2026-02-21 03-06-17" src="https://github.com/user-attachments/assets/86ff0907-b9c5-4464-950e-3d988160aac7" />
+<img width="385" height="717" alt="Screenshot from 2026-02-21 03-05-35" src="https://github.com/user-attachments/assets/d193c066-f082-4436-9c81-d250198b6d42" />
+
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/e7bc12bf-dee3-470c-afe4-8e73fe5a21ad" width="250" />
   <img src="https://github.com/user-attachments/assets/674e699c-8abd-45f0-817b-9347b252ebb7" width="250" />
