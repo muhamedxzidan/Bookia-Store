@@ -4,6 +4,7 @@ import 'package:bookia_store/core/share_widgets/app_text_form_fild.dart';
 import 'package:bookia_store/core/theme/app_colors.dart';
 import 'package:bookia_store/core/theme/app_strings.dart';
 import 'package:bookia_store/features/auth/Presentation/login_screen.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,21 +24,21 @@ class ForgotPassword extends StatelessWidget {
               const AppButtonBack(),
               SizedBox(height: 30.h),
               Text(
-                AppStrings.hintTextForgotPassword,
+                AppStrings.hintTextForgotPassword.tr(),
                 style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10.h),
               Text(
-                AppStrings.hintTextdescriptionForgotPassword,
+                AppStrings.hintTextdescriptionForgotPassword.tr(),
                 style: TextStyle(
                   fontSize: 16.sp,
                   color: AppColors.hintTextDescriptionColor,
                 ),
               ),
               SizedBox(height: 30.h),
-              const AppTextFormFild(
+              AppTextFormFild(
                 color: AppColors.hintTextColor,
-                hintText: AppStrings.hintTextEmail,
+                hintText: AppStrings.hintTextEmail.tr(),
               ),
               SizedBox(height: 30.h),
               AppButton(
@@ -46,7 +47,7 @@ class ForgotPassword extends StatelessWidget {
                   color: AppColors.secondaryColor,
                 ),
                 onPressed: () {},
-                title: AppStrings.sendCode,
+                title: AppStrings.sendCode.tr(),
                 color: AppColors.primaryColor,
               ),
               SizedBox(height: 361.h),
@@ -54,7 +55,7 @@ class ForgotPassword extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    AppStrings.rememberPassword,
+                    AppStrings.rememberPassword.tr(),
                     style: TextStyle(
                       fontSize: 16.sp,
                       color: AppColors.hintTextDescriptionColor,
@@ -71,7 +72,7 @@ class ForgotPassword extends StatelessWidget {
                       );
                     },
                     child: Text(
-                      AppStrings.login,
+                      AppStrings.login.tr(),
                       style: TextStyle(
                         fontSize: 16.sp,
                         color: AppColors.primaryColor,

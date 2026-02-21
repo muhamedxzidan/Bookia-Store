@@ -5,6 +5,7 @@ import 'package:bookia_store/core/share_widgets/app_text_form_fild.dart';
 import 'package:bookia_store/core/theme/app_colors.dart';
 import 'package:bookia_store/core/theme/app_strings.dart';
 import 'package:bookia_store/features/auth/Presentation/login_screen.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -25,34 +26,34 @@ class RegisterScreen extends StatelessWidget {
               const AppButtonBack(),
               SizedBox(height: 28.h),
               Text(
-                AppStrings.titleRegister,
+                AppStrings.titleRegister.tr(),
                 style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 32.h),
-              const AppTextFormFild(
+              AppTextFormFild(
                 color: AppColors.hintTextColor,
-                hintText: AppStrings.hintTextUserName,
+                hintText: AppStrings.hintTextUserName.tr(),
               ),
               SizedBox(height: 15.h),
-              const AppTextFormFild(
+              AppTextFormFild(
                 color: AppColors.hintTextColor,
-                hintText: AppStrings.hintTextEmail,
+                hintText: AppStrings.hintTextEmail.tr(),
               ),
               SizedBox(height: 15.h),
-              const AppTextFormFild(
+              AppTextFormFild(
                 color: AppColors.hintTextColor,
-                hintText: AppStrings.hintTextPassword,
+                hintText: AppStrings.hintTextPassword.tr(),
               ),
               SizedBox(height: 15.h),
-              const AppTextFormFild(
+              AppTextFormFild(
                 color: AppColors.hintTextColor,
-                hintText: AppStrings.hintTextConfirmPassword,
+                hintText: AppStrings.hintTextConfirmPassword.tr(),
               ),
               SizedBox(height: 30.h),
               AppButton(
                 onPressed: () {},
                 color: AppColors.primaryColor,
-                title: AppStrings.register,
+                title: AppStrings.register.tr(),
                 AppTextStyle: TextStyle(
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w500,
@@ -63,9 +64,11 @@ class RegisterScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  AppTextButoom(text: AppStrings.hintTextAlreadyHaveAccount),
                   AppTextButoom(
-                    text: ' ${AppStrings.login} now',
+                    text: AppStrings.hintTextAlreadyHaveAccount.tr(),
+                  ),
+                  AppTextButoom(
+                    text: AppStrings.loginNow.tr(),
                     onPressed: () {
                       Navigator.push(
                         context,

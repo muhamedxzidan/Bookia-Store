@@ -6,6 +6,7 @@ import 'package:bookia_store/core/share_widgets/app_butoom_back.dart';
 import 'package:bookia_store/core/utils/assets.gen.dart';
 import 'package:bookia_store/features/auth/Presentation/forgot_password.dart';
 import 'package:bookia_store/features/auth/Presentation/register_screen.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -34,18 +35,18 @@ class _LoginScreenState extends State<LoginScreen> {
               const AppButtonBack(),
               SizedBox(height: 29.h),
               Text(
-                AppStrings.titleLogin,
+                AppStrings.titleLogin.tr(),
                 style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 32.h),
-              const AppTextFormFild(
+              AppTextFormFild(
                 color: AppColors.hintTextColor,
-                hintText: AppStrings.hintTextEmail,
+                hintText: AppStrings.hintTextEmail.tr(),
               ),
               SizedBox(height: 15.h),
               AppTextFormFild(
                 color: AppColors.hintTextColor,
-                hintText: AppStrings.hintTextPassword,
+                hintText: AppStrings.hintTextPassword.tr(),
                 isPassword: isPassword = true,
                 svgPicture: SvgPicture.asset(Assets.icons.eye),
               ),
@@ -60,17 +61,17 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   );
                 },
-                child: const Text(AppStrings.forgotPassword),
+                child: Text(AppStrings.forgotPassword.tr()),
               ),
               SizedBox(height: 13.h),
               AppButton(
                 onPressed: () {},
                 color: AppColors.primaryColor,
-                title: AppStrings.login,
+                title: AppStrings.login.tr(),
               ),
               SizedBox(height: 34.h),
               const Divider(),
-              const Center(child: Text(AppStrings.or)),
+              Center(child: Text(AppStrings.or.tr())),
               SizedBox(height: 34.h),
               InkWell(
                 onTap: () {},
@@ -79,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     SvgPicture.asset(Assets.icons.google),
                     SizedBox(width: 10.w),
-                    const Text(AppStrings.loginWithGoogle),
+                    Text(AppStrings.loginWithGoogle.tr()),
                   ],
                 ),
               ),
@@ -91,7 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     SvgPicture.asset(Assets.icons.apple),
                     SizedBox(width: 10.w),
-                    const Text(AppStrings.loginWithApple),
+                    Text(AppStrings.loginWithApple.tr()),
                   ],
                 ),
               ),
@@ -111,11 +112,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       );
                     },
-                    child: const Text(AppStrings.dontHaveAccount),
+                    child: Text(AppStrings.dontHaveAccount.tr()),
                   ),
-                  const Text(
-                    AppStrings.registerNow,
-                    style: TextStyle(
+                  Text(
+                    AppStrings.registerNow.tr(),
+                    style: const TextStyle(
                       color: AppColors.primaryColor,
                       fontWeight: FontWeight.bold,
                     ),
