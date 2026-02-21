@@ -71,31 +71,53 @@ graph TD
 
 ## 📸 Screenshots
 
-### App Gallery
+### Authentication Flow
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/48f765e4-9b93-400d-9e9f-181fc94a9a5b" width="230" alt="App Screen 01" />
-  <img src="https://github.com/user-attachments/assets/ae1bcd8a-71e9-42c4-9279-72b911fd0076" width="230" alt="App Screen 02" />
-  <img src="https://github.com/user-attachments/assets/2c0694e6-db31-4a97-98d4-c9c7770ad223" width="230" alt="App Screen 03" />
-</p>
+Experience the complete authentication journey with our polished UI:
 
-<p align="center">
-  <sub><b>Screen 01</b></sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <sub><b>Screen 02</b></sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <sub><b>Screen 03</b></sub>
-</p>
+#### 🎯 Getting Started & Access
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/86ff0907-b9c5-4464-950e-3d988160aac7" width="230" alt="App Screen 04" />
-  <img src="https://github.com/user-attachments/assets/d193c066-f082-4436-9c81-d250198b6d42" width="230" alt="App Screen 05" />
-  <img src="https://github.com/user-attachments/assets/07a3e064-4467-4ec7-b926-3c0cbb4432bc" width="230" alt="App Screen 06" />
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/48f765e4-9b93-400d-9e9f-181fc94a9a5b" width="220" alt="Welcome Screen" />
+      <br/>
+      <sub><b>Welcome</b></sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/ae1bcd8a-71e9-42c4-9279-72b911fd0076" width="220" alt="Login Screen" />
+      <br/>
+      <sub><b>Login</b></sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/2c0694e6-db31-4a97-98d4-c9c7770ad223" width="220" alt="Register Screen" />
+      <br/>
+      <sub><b>Registration</b></sub>
+    </td>
+  </tr>
+</table>
 
-<p align="center">
-  <sub><b>Screen 04</b></sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <sub><b>Screen 05</b></sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <sub><b>Screen 06</b></sub>
-</p>
+#### 🔑 Password Recovery
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/86ff0907-b9c5-4464-950e-3d988160aac7" width="220" alt="Forgot Password Screen" />
+      <br/>
+      <sub><b>Forgot Password</b></sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/d193c066-f082-4436-9c81-d250198b6d42" width="220" alt="OTP Verification Screen" />
+      <br/>
+      <sub><b>OTP Verification</b></sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/07a3e064-4467-4ec7-b926-3c0cbb4432bc" width="220" alt="Create New Password Screen" />
+      <br/>
+      <sub><b>Reset Password</b></sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
