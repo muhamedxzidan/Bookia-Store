@@ -75,46 +75,46 @@ graph TD
 
 Experience the complete authentication journey with our polished UI:
 
-#### 🎯 Getting Started & Access
+#### 🎯 Authentication Steps (1 → 6)
 
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/48f765e4-9b93-400d-9e9f-181fc94a9a5b" width="220" alt="Welcome Screen" />
+      <img src="https://github.com/user-attachments/assets/48f765e4-9b93-400d-9e9f-181fc94a9a5b" width="220" alt="Auth Step 1" />
       <br/>
-      <sub><b>Welcome</b></sub>
+      <sub><b>Step 1 · Welcome</b></sub>
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/ae1bcd8a-71e9-42c4-9279-72b911fd0076" width="220" alt="Login Screen" />
+      <img src="https://github.com/user-attachments/assets/ae1bcd8a-71e9-42c4-9279-72b911fd0076" width="220" alt="Auth Step 2" />
       <br/>
-      <sub><b>Login</b></sub>
+      <sub><b>Step 2 · Login</b></sub>
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/2c0694e6-db31-4a97-98d4-c9c7770ad223" width="220" alt="Register Screen" />
+      <img src="https://github.com/user-attachments/assets/2c0694e6-db31-4a97-98d4-c9c7770ad223" width="220" alt="Auth Step 3" />
       <br/>
-      <sub><b>Registration</b></sub>
+      <sub><b>Step 3 · Register</b></sub>
     </td>
   </tr>
 </table>
 
-#### 🔑 Password Recovery
+#### 🔑 Recovery Flow
 
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/86ff0907-b9c5-4464-950e-3d988160aac7" width="220" alt="Forgot Password Screen" />
+      <img src="https://github.com/user-attachments/assets/86ff0907-b9c5-4464-950e-3d988160aac7" width="220" alt="Auth Step 4" />
       <br/>
-      <sub><b>Forgot Password</b></sub>
+      <sub><b>Step 4 · Forgot Password</b></sub>
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/d193c066-f082-4436-9c81-d250198b6d42" width="220" alt="OTP Verification Screen" />
+      <img src="https://github.com/user-attachments/assets/d193c066-f082-4436-9c81-d250198b6d42" width="220" alt="Auth Step 5" />
       <br/>
-      <sub><b>OTP Verification</b></sub>
+      <sub><b>Step 5 · OTP Verification</b></sub>
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/07a3e064-4467-4ec7-b926-3c0cbb4432bc" width="220" alt="Create New Password Screen" />
+      <img src="https://github.com/user-attachments/assets/07a3e064-4467-4ec7-b926-3c0cbb4432bc" width="220" alt="Auth Step 6" />
       <br/>
-      <sub><b>Reset Password</b></sub>
+      <sub><b>Step 6 · Create New Password</b></sub>
     </td>
   </tr>
 </table>
