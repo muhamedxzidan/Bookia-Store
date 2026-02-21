@@ -77,6 +77,11 @@ Experience the complete authentication journey with our polished UI:
 
 #### 🎯 Authentication Steps (1 → 6)
 
+![WhatsApp Image 2026-02-20 at 1 56 57 AM](https://github.com/user-attachments/assets/b84b4785-98af-40f9-92fa-1632a740347d)
+<img width="388" height="720" alt="Screenshot from 2026-02-21 03-32-07" src="https://github.com/user-attachments/assets/c875ed90-0c10-49d8-9df0-b2cb63d58199" />
+
+
+
 <table align="center">
   <tr>
     <td align="center">
