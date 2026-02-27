@@ -24,13 +24,31 @@ class $AssetsIconsGen {
   String get sucsses => 'assets/icons/sucsses.svg';
 
   /// List of all assets
-  List<String> get values => [back, logo, sucsses];
+  List<String> get values => [
+    back,
+    logo,
+    sucsses,
+    eye,
+    google,
+    apple,
+    bookmark,
+    cart,
+    home,
+    profile,
+    search,
+  ];
 
   String get eye => 'assets/icons/eye.svg';
-
   String get google => 'assets/icons/google.svg';
-
   String get apple => 'assets/icons/apple.svg';
+  String get lock => 'assets/icons/lock.svg';
+  String get email => 'assets/icons/email.svg';
+  String get home => 'assets/icons/home.svg';
+  String get cart => 'assets/icons/cart.svg';
+  String get heart => 'assets/icons/heart.svg';
+  String get profile => 'assets/icons/profile.svg';
+  String get search => 'assets/icons/search.svg';
+  String get bookmark => 'assets/icons/Bookmark.svg';
 }
 
 class $AssetsImagesGen {

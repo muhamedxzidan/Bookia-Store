@@ -9,12 +9,14 @@ class AppTextFormFild extends StatefulWidget {
     this.svgPicture,
     this.color,
     this.isPassword = false,
+    this.controller,
   });
 
   final String hintText;
   final SvgPicture? svgPicture;
   final Color? color;
   final bool isPassword;
+  final TextEditingController? controller;
 
   @override
   State<AppTextFormFild> createState() => _AppTextFormFildState();
@@ -24,6 +26,7 @@ class _AppTextFormFildState extends State<AppTextFormFild> {
   bool obscureText = true;
   @override
   Widget build(BuildContext context) => TextFormField(
+    controller: widget.controller,
     keyboardType: widget.isPassword
         ? TextInputType.visiblePassword
         : TextInputType.emailAddress,

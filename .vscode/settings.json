@@ -1,43 +1,45 @@
 {
-    "chat.alternativeToolAction.enabled": true,
-    "chat.checkpoints.showFileChanges": true,
-    "chat.customAgentInSubagent.enabled": true,
-    "chat.mcp.assisted.nuget.enabled": true,
-    "chat.mcp.discovery.enabled": {
-        "claude-desktop": true,
-        "windsurf": true,
-        "cursor-global": true,
-        "cursor-workspace": true
-    },
-    "chat.mcp.gallery.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": "active",
+  "chat.alternativeToolAction.enabled": true,
+  "chat.checkpoints.showFileChanges": true,
+  "chat.customAgentInSubagent.enabled": true,
+  "chat.mcp.assisted.nuget.enabled": true,
+  "chat.mcp.discovery.enabled": {
+    "claude-desktop": true,
+    "cursor-global": true,
+    "cursor-workspace": true
+  },
+  "chat.mcp.gallery.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.quickSuggestionsDelay": 0,
+  "editor.inlineSuggest.minShowDelay": 0,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.tabCompletion": "on",
+  "editor.suggestSelection": "first",
+  "editor.suggest.preview": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "github.copilot.inlineSuggest.enable": true,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "[dart]": {
     "editor.inlineSuggest.enabled": true,
     "editor.quickSuggestions": {
-        "other": true,
-        "comments": true,
-        "strings": true
-    },
-    "editor.suggestOnTriggerCharacters": true,
-    "editor.quickSuggestionsDelay": 0,
-    "editor.inlineSuggest.minShowDelay": 0,
-    "editor.acceptSuggestionOnEnter": "on",
-    "editor.tabCompletion": "on",
-    "editor.suggestSelection": "first",
-    "editor.suggest.preview": true,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "github.copilot.inlineSuggest.enable": true,
-    "github.copilot.editor.enableAutoCompletions": true,
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": false,
-        "markdown": true,
-        "scminput": false
-    },
-    "[dart]": {
-        "editor.inlineSuggest.enabled": true,
-        "editor.quickSuggestions": {
-            "other": true,
-            "comments": true,
-            "strings": true
-        }
+      "other": true,
+      "comments": true,
+      "strings": true
     }
+  }
 }
