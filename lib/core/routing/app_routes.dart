@@ -5,9 +5,11 @@ import 'package:bookia_store/features/auth/Presentation/login_screen.dart';
 import 'package:bookia_store/features/auth/Presentation/otp_verification.dart';
 import 'package:bookia_store/features/auth/Presentation/password_changed.dart';
 import 'package:bookia_store/features/auth/Presentation/register_screen.dart';
+import 'package:bookia_store/features/auth/cubit/auth_cubit.dart';
 import 'package:bookia_store/features/buttom_nav_bar/Presentation/bottom_nav_bar_screen.dart';
 import 'package:bookia_store/features/home/Presentation/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppRoutes {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
@@ -15,9 +17,19 @@ class AppRoutes {
       case Routes.home:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
       case Routes.login:
-        return MaterialPageRoute(builder: (_) => const LoginScreen());
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (_) => AuthCubit(),
+            child: const LoginScreen(),
+          ),
+        );
       case Routes.register:
-        return MaterialPageRoute(builder: (_) => const RegisterScreen());
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => AuthCubit(),
+            child: const RegisterScreen(),
+          ),
+        );
       case Routes.forgotPassword:
         return MaterialPageRoute(builder: (_) => const ForgotPassword());
       case Routes.otpVerification:

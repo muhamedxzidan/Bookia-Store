@@ -43,4 +43,6 @@ class AppStrings {
   static const String descriptionPasswordChanged =
       'description_password_changed';
   static const String backToLogin = 'back_to_login';
+  static const String hintTextAddress = 'hint_text_address';
+  static const String hintTextCity = 'hint_text_city';
 }

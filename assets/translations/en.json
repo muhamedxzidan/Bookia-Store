@@ -31,5 +31,7 @@
   "reset_password": "Reset Password",
   "password_changed": "Password Changed!",
   "description_password_changed": "Your password has been changed successfully.",
-  "back_to_login": "Back to Login"
+  "back_to_login": "Back to Login",
+  "hint_text_address": "Address",
+  "hint_text_city": "City"
 }

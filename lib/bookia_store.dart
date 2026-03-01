@@ -1,4 +1,5 @@
-import 'package:bookia_store/features/auth/Presentation/login_screen.dart';
+import 'package:bookia_store/core/routing/app_routes.dart';
+import 'package:bookia_store/core/routing/routes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,8 +17,8 @@ class BookiaStore extends StatelessWidget {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       debugShowCheckedModeBanner: false,
-
-      home: const LoginScreen(),
+      onGenerateRoute: AppRoutes.generateRoute,
+      initialRoute: Routes.login,
     ),
   );
 }

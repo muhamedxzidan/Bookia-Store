@@ -31,5 +31,7 @@
   "reset_password": "إعادة تعيين كلمة المرور",
   "password_changed": "تم تغيير كلمة المرور!",
   "description_password_changed": "تم تغيير كلمة المرور الخاصة بك بنجاح.",
-  "back_to_login": "العودة إلى تسجيل الدخول"
+  "back_to_login": "العودة إلى تسجيل الدخول",
+  "hint_text_address": "العنوان",
+  "hint_text_city": "المدينة"
 }
