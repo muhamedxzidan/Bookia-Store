@@ -1,8 +1,8 @@
 import 'package:bookia_store/core/utils/api_const.dart';
-import 'package:bookia_store/core/utils/shared_pref_const.dart';
+import 'package:bookia_store/core/utils/token_key_secuer.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class AuthRepo {
   static final Dio _dio = Dio();
@@ -17,9 +17,16 @@ class AuthRepo {
         data: {'email': email, 'password': password},
       );
       if (response.statusCode == 200 && response.data != null) {
-        await saveToken(response.data!["data"]["token"].toString());
+        // Save the token securely using flutter_secure_storage
+        await saveTokenSecurely(response.data!["data"]["token"].toString());
         debugPrint("Token saved successfully");
         return true;
+
+        // Save the token using shared_preferences (not recommended for sensitive data)
+
+        // await saveToken(response.data!["data"]["token"].toString());
+        //debugPrint("Token saved successfully");
+        // return true;
       } else {
         debugPrint(response.data.toString());
         return false;
@@ -63,9 +70,14 @@ class AuthRepo {
     }
   }
 
-  static Future<String> saveToken(String token) async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setString(SharedPrefConst.tokenKey, token);
-    return token;
+  static Future<void> saveTokenSecurely(String token) async {
+    final storage = const FlutterSecureStorage();
+    await storage.write(key: TokenKeySecuer.tokenKey, value: token);
   }
+
+  //static Future<String> saveToken(String token) async {
+  //final SharedPreferences prefs = await SharedPreferences.getInstance();
+  //prefs.setString(SharedPrefConst.tokenKey, token);
+  // return token;
+  //}
 }

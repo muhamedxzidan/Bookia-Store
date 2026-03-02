@@ -5,7 +5,6 @@ import 'package:bookia_store/core/theme/app_colors.dart';
 import 'package:bookia_store/core/theme/app_strings.dart';
 import 'package:bookia_store/core/share_widgets/app_butoom_back.dart';
 import 'package:bookia_store/core/utils/assets.gen.dart';
-import 'package:bookia_store/features/auth/Presentation/register_screen.dart';
 import 'package:bookia_store/features/auth/cubit/auth_cubit.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
