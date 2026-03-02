@@ -1,6 +1,8 @@
 import 'package:bookia_store/core/utils/api_const.dart';
+import 'package:bookia_store/core/utils/shared_pref_const.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthRepo {
   static final Dio _dio = Dio();
@@ -15,7 +17,8 @@ class AuthRepo {
         data: {'email': email, 'password': password},
       );
       if (response.statusCode == 200 && response.data != null) {
-        debugPrint(response.data.toString());
+        await saveToken(response.data!["data"]["token"].toString());
+        debugPrint("Token saved successfully");
         return true;
       } else {
         debugPrint(response.data.toString());
@@ -58,5 +61,11 @@ class AuthRepo {
       debugPrint(e.toString());
       return false;
     }
+  }
+
+  static Future<String> saveToken(String token) async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setString(SharedPrefConst.tokenKey, token);
+    return token;
   }
 }

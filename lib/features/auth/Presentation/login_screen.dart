@@ -71,7 +71,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   listener: (context, state) {
                     if (state is AuthLoginLoadingState) {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Loading...')),
+                        const SnackBar(
+                          content: CircularProgressIndicator(),
+                          duration: Duration(seconds: 3),
+                        ),
                       );
                     } else if (state is AuthLoginSuccessState) {
                       Navigator.pushReplacementNamed(context, Routes.home);
@@ -127,13 +130,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     TextButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          // ignore: inference_failure_on_instance_creation
-                          MaterialPageRoute(
-                            builder: (context) => const RegisterScreen(),
-                          ),
-                        );
+                        Navigator.pushNamed(context, Routes.register);
                       },
                       child: Text(AppStrings.dontHaveAccount.tr()),
                     ),
