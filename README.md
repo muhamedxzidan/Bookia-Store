@@ -69,14 +69,17 @@ graph TD
 
 ---
 
+## 🎥 Demo
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6cdd01a1-1679-43df-b607-09bf34263910" width="300" />
+</p>
+
+---
+
 ## 📸 Screenshots
 
-
-https://github.com/user-attachments/assets/6cdd01a1-1679-43df-b607-09bf34263910
-
-
 ### Authentication Flow
-
 Experience the complete authentication journey with our polished UI:
 
 #### 🎯 Authentication Steps (1 → 8)
@@ -144,8 +147,8 @@ Experience the complete authentication journey with our polished UI:
 ### Run Locally
 
 ```bash
-git clone https://github.com/your-username/bookia_store.git
-cd bookia_store
+git clone https://github.com/muhamedxzidan/Bookia-Store.git
+cd Bookia-Store
 flutter pub get
 flutter run
 ```
