@@ -69,11 +69,9 @@ graph TD
 
 ---
 
-## 🎥 Demo
+## 🎥 Project Demo
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/6cdd01a1-1679-43df-b607-09bf34263910" width="300" />
-</p>
+https://github.com/user-attachments/assets/6cdd01a1-1679-43df-b607-09bf34263910
 
 ---
 
