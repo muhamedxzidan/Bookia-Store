@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 
 class DioHelper {
-  static final Dio _dio = Dio(
+  static final Dio dio = Dio(
     BaseOptions(
       baseUrl: 'https://codingarabic.online/api',
       connectTimeout: const Duration(seconds: 10),

@@ -14,41 +14,53 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/apple.svg
+  String get apple => 'assets/icons/apple.svg';
+
   /// File path: assets/icons/back.svg
   String get back => 'assets/icons/back.svg';
 
+  /// File path: assets/icons/bookmark.svg
+  String get bookmark => 'assets/icons/bookmark.svg';
+
+  /// File path: assets/icons/category.svg
+  String get category => 'assets/icons/category.svg';
+
+  /// File path: assets/icons/eye.svg
+  String get eye => 'assets/icons/eye.svg';
+
+  /// File path: assets/icons/google.svg
+  String get google => 'assets/icons/google.svg';
+
+  /// File path: assets/icons/home.svg
+  String get home => 'assets/icons/home.svg';
+
   /// File path: assets/icons/logo.svg
   String get logo => 'assets/icons/logo.svg';
+
+  /// File path: assets/icons/profile.svg
+  String get profile => 'assets/icons/profile.svg';
+
+  /// File path: assets/icons/search.svg
+  String get search => 'assets/icons/search.svg';
 
   /// File path: assets/icons/sucsses.svg
   String get sucsses => 'assets/icons/sucsses.svg';
 
   /// List of all assets
   List<String> get values => [
+    apple,
     back,
-    logo,
-    sucsses,
+    bookmark,
+    category,
     eye,
     google,
-    apple,
-    bookmark,
-    cart,
     home,
+    logo,
     profile,
     search,
+    sucsses,
   ];
-
-  String get eye => 'assets/icons/eye.svg';
-  String get google => 'assets/icons/google.svg';
-  String get apple => 'assets/icons/apple.svg';
-  String get lock => 'assets/icons/lock.svg';
-  String get email => 'assets/icons/email.svg';
-  String get home => 'assets/icons/home.svg';
-  String get cart => 'assets/icons/cart.svg';
-  String get heart => 'assets/icons/heart.svg';
-  String get profile => 'assets/icons/profile.svg';
-  String get search => 'assets/icons/search.svg';
-  String get bookmark => 'assets/icons/Bookmark.svg';
 }
 
 class $AssetsImagesGen {

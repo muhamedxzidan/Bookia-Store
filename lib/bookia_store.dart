@@ -23,5 +23,5 @@ class BookiaStore extends StatelessWidget {
     ),
   );
 
-  String start() => token.isEmpty ? Routes.login : Routes.home;
+  String start() => token.isEmpty ? Routes.login : Routes.bottomNavBar;
 }

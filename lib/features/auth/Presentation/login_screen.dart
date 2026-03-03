@@ -76,7 +76,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       );
                     } else if (state is AuthLoginSuccessState) {
-                      Navigator.pushReplacementNamed(context, Routes.home);
+                      Navigator.pushReplacementNamed(
+                        context,
+                        Routes.bottomNavBar,
+                      );
                     } else if (state is AuthLoginErrorState) {
                       ScaffoldMessenger.of(
                         context,
