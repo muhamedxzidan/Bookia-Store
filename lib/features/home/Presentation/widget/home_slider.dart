@@ -1,72 +1,42 @@
-import 'package:bookia_store/core/theme/app_colors.dart';
-import 'package:bookia_store/features/home/cubit/home_cubit.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class HomeSlider extends StatefulWidget {
+
+class HomeSlider extends StatelessWidget {
   const HomeSlider({super.key});
 
   @override
-  State<HomeSlider> createState() => _HomeSliderState();
-}
+  Widget build(BuildContext context) => Column(
+    children: [
+      CarouselSlider(
+        options: CarouselOptions(height: 400.0),
 
-class _HomeSliderState extends State<HomeSlider> {
-  int _currentIndex = 0;
-  @override
-  Widget build(BuildContext context) => BlocBuilder<HomeCubit, HomeState>(
-    builder: (context, state) {
-      if (state is GetHomeSliderLoading) {
-        return const CircularProgressIndicator();
-      } else if (state is GetHomeSliderSuccess) {
-        return Column(
-          children: [
-            CarouselSlider(
-              options: CarouselOptions(
-                height: 300.0,
-                autoPlay: true,
+        autoPlay: true,
+        autoPlayInterval: const Duration(seconds: 3),
+        viewportFraction: 1.0,
+        enableInfiniteScroll: true,
+        onchange: (index, reason) {
+          // Handle slide change if needed
+        },
+      );
 
-                autoPlayInterval: const Duration(seconds: 3),
-                viewportFraction: 1.0,
-                enableInfiniteScroll: true,
-                onPageChanged: (index, reason) {
-                  setState(() {
-                    _currentIndex = index;
-                  });
-                },
-              ),
-              items: state.sliders
-                  .map(
-                    (slider) => Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 12.w),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(16.0),
-                        child: Image.network(
-                          state.sliders[_currentIndex].image ?? '',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  )
-                  .toList(),
-            ),
-            SizedBox(height: 12.h),
-            AnimatedSmoothIndicator(
-              activeIndex: _currentIndex,
-              count: state.sliders.length,
-              effect: const ExpandingDotsEffect(
-                activeDotColor: AppColors.primaryColor,
-                dotHeight: 8,
-                dotWidth: 8,
-                spacing: 8,
+        items: List.generate( 3 , (index)=>
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Container(
+            width: double.infinity,
+            decoration: BoxDecoration(s
+              borderRadius: BorderRadius.circular(16.0),
+              image: DecorationImage(
+                image: NetworkImage('https://via.placeholder.com/800x400?text=Slide+${index + 1}'),
+                fit: BoxFit.cover,
               ),
             ),
-          ],
-        );
-      }
-      return const SizedBox.shrink();
-    },
+          )
+
+   
+        ),
+      ),
+    ],
+    
   );
 }
