@@ -71,6 +71,10 @@ graph TD
 
 ## 📸 Screenshots
 
+
+https://github.com/user-attachments/assets/6cdd01a1-1679-43df-b607-09bf34263910
+
+
 ### Authentication Flow
 
 Experience the complete authentication journey with our polished UI:
