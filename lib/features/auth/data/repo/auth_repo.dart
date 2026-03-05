@@ -1,18 +1,16 @@
+import 'package:bookia_store/core/service/dio_helper.dart';
 import 'package:bookia_store/core/utils/api_const.dart';
 import 'package:bookia_store/core/utils/token_key_secuer.dart';
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class AuthRepo {
-  static final Dio _dio = Dio();
-
   static Future<bool> login({
     required String email,
     required String password,
   }) async {
     try {
-      final response = await _dio.post<Map<String, dynamic>>(
+      final response = await DioHelper.dio.post<Map<String, dynamic>>(
         ApiConst.loginEndpoint,
         data: {'email': email, 'password': password},
       );
@@ -46,7 +44,7 @@ class AuthRepo {
     required String city,
   }) async {
     try {
-      final response = await _dio.post<Map<String, dynamic>>(
+      final response = await DioHelper.dio.post<Map<String, dynamic>>(
         ApiConst.registerEndpoint,
         data: {
           'name': name,

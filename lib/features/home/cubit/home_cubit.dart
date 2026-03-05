@@ -12,7 +12,7 @@ class HomeCubit extends Cubit<HomeState> {
     emit(GetHomeSliderLoading());
     final response = await HomeRepo.getHomeSliders();
     if (response is SliderModel) {
-      emit(GetHomeSliderSuccess(response.data?.sliders ?? []));
+      emit(GetHomeSliderSuccess(response.data.sliders));
     } else {
       emit(GetHomeSliderError());
     }

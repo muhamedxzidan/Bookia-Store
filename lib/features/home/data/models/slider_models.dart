@@ -1,32 +1,45 @@
 class SliderModel {
-  SliderModel.fromJson(Map<String, dynamic> json) {
-    message = json['message'];
-    status = json['status'];
-    data = json['data'] == null ? null : SliderData.fromJson(json['data']);
+  SliderModel({
+    required this.data,
+    required this.message,
+    required this.status,
+  });
+
+  factory SliderModel.fromJson(Map<String, dynamic> json) {
+    final dataMap = json['data'] as Map<String, dynamic>? ?? {};
+    return SliderModel(
+      data: SliderData.fromJson(dataMap),
+      message: (json['message'] ?? '').toString(),
+      status: (json['status'] as num?)?.toInt() ?? 0,
+    );
   }
 
-  SliderData? data;
-  String? message;
-  int? status;
+  final SliderData data;
+  final String message;
+  final int status;
 }
 
 class SliderData {
-  SliderData.fromJson(Map<String, dynamic> json) {
-    if (json['sliders'] != null) {
-      sliders = <SliderImage>[];
-      for (var e in json['sliders']) {
-        sliders!.add(SliderImage.fromJson(e));
-      }
-    }
+  SliderData({required this.sliders});
+
+  factory SliderData.fromJson(Map<String, dynamic> json) {
+    final slidersList = json['sliders'] as List<dynamic>? ?? <dynamic>[];
+    return SliderData(
+      sliders: slidersList
+          .whereType<Map<String, dynamic>>()
+          .map(SliderItem.fromJson)
+          .toList(),
+    );
   }
 
-  List<SliderImage>? sliders;
+  final List<SliderItem> sliders;
 }
 
-class SliderImage {
-  SliderImage.fromJson(Map<String, dynamic> json) {
-    image = json['image'];
-  }
+class SliderItem {
+  SliderItem({required this.image});
 
-  String? image;
+  factory SliderItem.fromJson(Map<String, dynamic> json) =>
+      SliderItem(image: (json['image'] ?? '').toString());
+
+  final String image;
 }

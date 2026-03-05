@@ -43,10 +43,7 @@ class _HomeSliderState extends State<HomeSlider> {
                       padding: EdgeInsets.symmetric(horizontal: 12.w),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(16.0),
-                        child: Image.network(
-                          state.sliders[_currentIndex].image ?? '',
-                          fit: BoxFit.cover,
-                        ),
+                        child: Image.network(slider.image, fit: BoxFit.cover),
                       ),
                     ),
                   )
