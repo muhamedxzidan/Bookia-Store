@@ -23,6 +23,7 @@ class HomeScreen extends StatelessWidget {
         ),
         SizedBox(height: 20.h),
         const HomeSlider(),
+
         SizedBox(height: 20.h),
       ],
     ),
