@@ -6,4 +6,6 @@ class AppColors {
   static const Color accentColor = Color(0xFF1A1A1A);
   static const Color hintTextColor = Color(0xffE8ECF4);
   static const Color hintTextDescriptionColor = Color(0xff8391A1);
+  static const Color bookCardBackgroundColor = Color(0xFFF5EFE1);
+  static const Color darkTextColor = Color(0xFF2F2F2F);
 }

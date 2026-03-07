@@ -33,5 +33,12 @@
   "description_password_changed": "Your password has been changed successfully.",
   "back_to_login": "Back to Login",
   "hint_text_address": "Address",
-  "hint_text_city": "City"
+  "hint_text_city": "City",
+  "profile_screen_title": "Profile Screen",
+  "cart_screen_title": "Cart Screen",
+  "wishlist_screen_title": "Wishlist Screen",
+  "home_brand_name": "Bookia",
+  "home_best_seller": "Best Seller",
+  "buy": "Buy",
+  "loading": "Loading..."
 }

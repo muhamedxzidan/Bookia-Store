@@ -11,6 +11,7 @@ class AuthCubit extends Cubit<AuthState> {
       final result = await AuthRepo.login(email: email, password: password);
       if (result) {
         emit(AuthLoginSuccessState());
+
       } else {
         emit(AuthLoginErrorState('Failed to login'));
       }

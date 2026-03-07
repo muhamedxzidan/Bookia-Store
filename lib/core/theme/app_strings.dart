@@ -45,4 +45,11 @@ class AppStrings {
   static const String backToLogin = 'back_to_login';
   static const String hintTextAddress = 'hint_text_address';
   static const String hintTextCity = 'hint_text_city';
+  static const String profileScreenTitle = 'profile_screen_title';
+  static const String cartScreenTitle = 'cart_screen_title';
+  static const String wishlistScreenTitle = 'wishlist_screen_title';
+  static const String homeBrandName = 'home_brand_name';
+  static const String homeBestSeller = 'home_best_seller';
+  static const String buy = 'buy';
+  static const String loading = 'loading';
 }

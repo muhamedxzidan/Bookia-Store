@@ -1,9 +1,11 @@
 import 'package:bookia_store/core/theme/app_colors.dart';
 import 'package:bookia_store/features/home/cubit/home_cubit.dart';
+import 'package:bookia_store/features/home/data/models/slider_models.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomeSlider extends StatefulWidget {
@@ -17,17 +19,26 @@ class _HomeSliderState extends State<HomeSlider> {
   int _currentIndex = 0;
   @override
   Widget build(BuildContext context) => BlocBuilder<HomeCubit, HomeState>(
+    buildWhen: (previous, current) =>
+        current is GetHomeSliderLoading ||
+        current is GetHomeSliderSuccess ||
+        current is GetHomeSliderError,
+
     builder: (context, state) {
-      if (state is GetHomeSliderLoading) {
-        return const CircularProgressIndicator();
-      } else if (state is GetHomeSliderSuccess) {
-        return Column(
+      final isLoading =
+          state is! GetHomeSliderSuccess && state is! GetHomeSliderError;
+      final sliders = state is GetHomeSliderSuccess
+          ? state.sliders
+          : <SliderImage>[];
+
+      return Skeletonizer(
+        enabled: isLoading,
+        child: Column(
           children: [
             CarouselSlider(
               options: CarouselOptions(
-                height: 300.0,
-                autoPlay: true,
-
+                height: 150.h,
+                autoPlay: !isLoading,
                 autoPlayInterval: const Duration(seconds: 3),
                 viewportFraction: 1.0,
                 enableInfiniteScroll: true,
@@ -37,36 +48,44 @@ class _HomeSliderState extends State<HomeSlider> {
                   });
                 },
               ),
-              items: state.sliders
-                  .map(
-                    (slider) => Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 12.w),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(16.0),
-                        child: Image.network(
-                          state.sliders[_currentIndex].image ?? '',
-                          fit: BoxFit.cover,
+              items: isLoading
+                  ? [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10.r),
+                        child: Container(
+                          width: double.infinity,
+                          height: 150.h,
+                          color: Colors.grey,
                         ),
                       ),
-                    ),
-                  )
-                  .toList(),
+                    ]
+                  : sliders
+                        .map(
+                          (slider) => ClipRRect(
+                            borderRadius: BorderRadius.circular(10.r),
+                            child: Image.network(
+                              slider.image ?? '',
+                              width: double.infinity,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        )
+                        .toList(),
             ),
             SizedBox(height: 12.h),
             AnimatedSmoothIndicator(
               activeIndex: _currentIndex,
-              count: state.sliders.length,
+              count: isLoading ? 3 : sliders.length,
               effect: const ExpandingDotsEffect(
                 activeDotColor: AppColors.primaryColor,
-                dotHeight: 8,
-                dotWidth: 8,
+                dotHeight: 7,
+                dotWidth: 7,
                 spacing: 8,
               ),
             ),
           ],
-        );
-      }
-      return const SizedBox.shrink();
+        ),
+      );
     },
   );
 }

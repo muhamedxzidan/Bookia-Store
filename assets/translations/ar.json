@@ -33,5 +33,12 @@
   "description_password_changed": "تم تغيير كلمة المرور الخاصة بك بنجاح.",
   "back_to_login": "العودة إلى تسجيل الدخول",
   "hint_text_address": "العنوان",
-  "hint_text_city": "المدينة"
+  "hint_text_city": "المدينة",
+  "profile_screen_title": "الملف الشخصي",
+  "cart_screen_title": "سلة التسوق",
+  "wishlist_screen_title": "قائمة الأمنيات",
+  "home_brand_name": "بوكيا",
+  "home_best_seller": "الأكثر مبيعاً",
+  "buy": "شراء",
+  "loading": "جاري التحميل..."
 }

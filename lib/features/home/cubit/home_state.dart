@@ -13,3 +13,12 @@ final class GetHomeSliderSuccess extends HomeState {
 }
 
 final class GetHomeSliderLoading extends HomeState {}
+
+final class GetBestSellerLoading extends HomeState {}
+
+final class GetBestSellerError extends HomeState {}
+
+final class GetBestSellerSuccess extends HomeState {
+  GetBestSellerSuccess(this.bestSellers);
+  final List<BookProduct> bestSellers;
+}

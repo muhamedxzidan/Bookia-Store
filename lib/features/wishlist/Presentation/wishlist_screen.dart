@@ -1,3 +1,5 @@
+import 'package:bookia_store/core/theme/app_strings.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class WishlistScreen extends StatelessWidget {
@@ -5,5 +7,5 @@ class WishlistScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) =>
-      const Center(child: Text('Wishlist Screen'));
+      Center(child: Text(AppStrings.wishlistScreenTitle.tr()));
 }

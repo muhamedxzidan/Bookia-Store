@@ -89,7 +89,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   listener: (context, state) {
                     if (state is AuthRegisterLoadingState) {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Loading...')),
+                        SnackBar(content: Text(AppStrings.loading.tr())),
                       );
                     } else if (state is AuthRegisterSuccessState) {
                       Navigator.pushReplacementNamed(context, Routes.login);

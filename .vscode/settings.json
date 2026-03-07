@@ -41,5 +41,10 @@
       "comments": true,
       "strings": true
     }
-  }
+  },
+  "better-folding.showFoldedBodyLinesCount": true,
+  "better-folding.showClosingBracket": true,
+  "better-folding.foldClosingBrackets": true,
+  "editor.foldingStrategy": "auto",
+  "editor.defaultFoldingRangeProvider": "mohammadbaqer.better-folding"
 }
