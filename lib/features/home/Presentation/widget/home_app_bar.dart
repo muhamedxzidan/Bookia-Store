@@ -15,13 +15,14 @@ class HomeAppBar extends StatelessWidget {
     children: [
       Row(
         children: [
-          SvgPicture.asset(Assets.icons.logo, width: 20.w),
+          SvgPicture.asset(Assets.icons.logo, width: 24.w, height: 24.h),
           SizedBox(width: 7.w),
           Text(
             AppStrings.homeBrandName.tr(),
             style: TextStyle(
               fontFamily: 'DM Serif Display',
               fontSize: 22.sp,
+              fontWeight: FontWeight.w400,
               color: AppColors.darkTextColor,
             ),
           ),
