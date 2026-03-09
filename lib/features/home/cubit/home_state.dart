@@ -12,6 +12,8 @@ final class GetHomeSliderSuccess extends HomeState {
   final List<SliderImage> sliders;
 }
 
+// Best Seller States
+
 final class GetHomeSliderLoading extends HomeState {}
 
 final class GetBestSellerLoading extends HomeState {}
