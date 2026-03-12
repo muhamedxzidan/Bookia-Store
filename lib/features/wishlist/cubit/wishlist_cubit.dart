@@ -2,7 +2,6 @@ import 'package:bloc/bloc.dart';
 import 'package:bookia_store/features/home/data/models/best_seller_model.dart';
 import 'package:bookia_store/features/wishlist/data/repo/wishlist_repo.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 
 part 'wishlist_state.dart';
 
