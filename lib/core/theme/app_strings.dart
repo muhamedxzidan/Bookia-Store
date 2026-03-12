@@ -52,4 +52,6 @@ class AppStrings {
   static const String homeBestSeller = 'home_best_seller';
   static const String buy = 'buy';
   static const String loading = 'loading';
+  static const String addToCart = 'add_to_cart';
+  static const String bookType = 'book_type';
 }

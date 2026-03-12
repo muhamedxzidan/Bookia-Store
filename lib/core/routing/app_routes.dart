@@ -8,6 +8,8 @@ import 'package:bookia_store/features/auth/Presentation/register_screen.dart';
 import 'package:bookia_store/features/auth/cubit/auth_cubit.dart';
 import 'package:bookia_store/features/buttom_nav_bar/Presentation/bottom_nav_bar_screen.dart';
 import 'package:bookia_store/features/home/Presentation/home_screen.dart';
+import 'package:bookia_store/features/home/Presentation/widget/book_details.dart';
+import 'package:bookia_store/features/home/data/models/best_seller_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -40,6 +42,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const PasswordChanged());
       case Routes.bottomNavBar:
         return MaterialPageRoute(builder: (_) => const BottomNavBarScreen());
+      case Routes.bookDetails:
+        final product = settings.arguments! as BookProduct;
+        return MaterialPageRoute(builder: (_) => BookDetails(product: product));
+
       default:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
     }

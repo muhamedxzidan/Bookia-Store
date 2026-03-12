@@ -20,14 +20,10 @@ class _HomeSliderState extends State<HomeSlider> {
   @override
   Widget build(BuildContext context) => BlocBuilder<HomeCubit, HomeState>(
     buildWhen: (previous, current) =>
-        current is GetHomeSliderLoading ||
-        current is GetHomeSliderSuccess ||
-        current is GetHomeSliderError,
-
+        current is HomeLoading || current is HomeLoaded || current is HomeError,
     builder: (context, state) {
-      final isLoading =
-          state is! GetHomeSliderSuccess && state is! GetHomeSliderError;
-      final sliders = state is GetHomeSliderSuccess
+      final isLoading = state is HomeLoading || state is HomeInitial;
+      final sliders = state is HomeLoaded
           ? state.sliders
           : <SliderImage>[];
 
@@ -38,7 +34,7 @@ class _HomeSliderState extends State<HomeSlider> {
             CarouselSlider(
               options: CarouselOptions(
                 height: 150.h,
-                autoPlay: !isLoading,
+                autoPlay: !isLoading && sliders.isNotEmpty,
                 autoPlayInterval: const Duration(seconds: 3),
                 viewportFraction: 1.0,
                 enableInfiniteScroll: true,
@@ -48,7 +44,7 @@ class _HomeSliderState extends State<HomeSlider> {
                   });
                 },
               ),
-              items: isLoading
+              items: isLoading || sliders.isEmpty
                   ? [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(10.r),
@@ -61,7 +57,7 @@ class _HomeSliderState extends State<HomeSlider> {
                     ]
                   : sliders
                         .map(
-                          (slider) => ClipRRect(
+                          (SliderImage slider) => ClipRRect(
                             borderRadius: BorderRadius.circular(10.r),
                             child: Image.network(
                               slider.image ?? '',
@@ -75,7 +71,7 @@ class _HomeSliderState extends State<HomeSlider> {
             SizedBox(height: 12.h),
             AnimatedSmoothIndicator(
               activeIndex: _currentIndex,
-              count: isLoading ? 3 : sliders.length,
+              count: isLoading || sliders.isEmpty ? 3 : sliders.length,
               effect: const ExpandingDotsEffect(
                 activeDotColor: AppColors.primaryColor,
                 dotHeight: 7,

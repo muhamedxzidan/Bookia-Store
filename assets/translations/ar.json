@@ -40,5 +40,7 @@
   "home_brand_name": "بوكيا",
   "home_best_seller": "الأكثر مبيعاً",
   "buy": "شراء",
-  "loading": "جاري التحميل..."
+  "loading": "جاري التحميل...",
+  "add_to_cart": "أضف إلى السلة",
+  "book_type": "كتاب ورقي"
 }

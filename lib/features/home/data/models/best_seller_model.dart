@@ -31,19 +31,21 @@ class BestSellerData {
 }
 
 class BookProduct {
-  BookProduct({this.id, this.name, this.price, this.image});
+  BookProduct({this.id, this.name, this.price, this.image, this.description});
 
   BookProduct.fromJson(Map<String, dynamic> json) {
     id = _asInt(json['id']);
     name = _asString(json['name']);
     price = json['price']?.toString();
     image = _asString(json['image']);
+    description = _asString(json['description']);
   }
 
   int? id;
   String? name;
   String? price;
   String? image;
+  String? description;
 }
 
 int? _asInt(dynamic value) {

@@ -1,8 +1,5 @@
 class AuthModel {
   AuthModel({required this.token, required this.name, required this.email});
-  final String token;
-  final String name;
-  final String email;
 
   factory AuthModel.fromJson(Map<String, dynamic> json) {
     final data = json['data'] as Map<String, dynamic>? ?? {};
@@ -14,6 +11,10 @@ class AuthModel {
       email: (user['email'] ?? '').toString(),
     );
   }
+
+  final String token;
+  final String name;
+  final String email;
 
   Map<String, dynamic> toJson() => {
     'token': token,

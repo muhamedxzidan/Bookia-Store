@@ -9,23 +9,28 @@ part 'home_state.dart';
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
 
+  List<SliderImage> _sliders = [];
+  List<BookProduct> _bestSellers = [];
+
   Future<void> getSliders() async {
-    emit(GetHomeSliderLoading());
+    emit(HomeLoading());
     final response = await HomeRepo.getHomeSliders();
     if (response is SliderModel) {
-      emit(GetHomeSliderSuccess(response.data?.sliders ?? []));
+      _sliders = response.data?.sliders ?? [];
+      emit(HomeLoaded(sliders: _sliders, bestSellers: _bestSellers));
     } else {
-      emit(GetHomeSliderError());
+      emit(HomeError(message: 'Failed to load sliders'));
     }
   }
 
   Future<void> getBestSellers() async {
-    emit(GetBestSellerLoading());
+    emit(HomeLoading());
     final response = await HomeRepo.getBestSellers();
     if (response is BestSellerModel) {
-      emit(GetBestSellerSuccess((response.data?.products ?? [])));
+      _bestSellers = response.data?.products ?? [];
+      emit(HomeLoaded(sliders: _sliders, bestSellers: _bestSellers));
     } else {
-      emit(GetBestSellerError());
+      emit(HomeError(message: 'Failed to load best sellers'));
     }
   }
 }

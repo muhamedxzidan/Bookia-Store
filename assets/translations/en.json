@@ -40,5 +40,7 @@
   "home_brand_name": "Bookia",
   "home_best_seller": "Best Seller",
   "buy": "Buy",
-  "loading": "Loading..."
+  "loading": "Loading...",
+  "add_to_cart": "Add To Cart",
+  "book_type": "Broché"
 }

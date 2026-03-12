@@ -9,13 +9,24 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
-class WishlistScreen extends StatelessWidget {
+class WishlistScreen extends StatefulWidget {
   const WishlistScreen({super.key});
 
   static final _dummyProducts = List.generate(
-    3,
+    10,
     (_) => BookProduct(id: 0, name: 'Book Title', price: '285', image: null),
   );
+
+  @override
+  State<WishlistScreen> createState() => _WishlistScreenState();
+}
+
+class _WishlistScreenState extends State<WishlistScreen> {
+  @override
+  void initState() {
+    super.initState();
+    context.read<WishlistCubit>().getWishlist();
+  }
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -32,16 +43,49 @@ class WishlistScreen extends StatelessWidget {
         ),
         SizedBox(height: 20.h),
         Expanded(
-          child: BlocBuilder<WishlistCubit, WishlistState>(
+          child: BlocConsumer<WishlistCubit, WishlistState>(
+            listener: (context, state) {
+              if (state is RemoveFromWishlistSuccess) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    duration: Duration(seconds: 1),
+                    backgroundColor: Colors.redAccent,
+                    content: Text('Removed from Wishlist Successfully'),
+                  ),
+                );
+              } else if (state is RemoveFromWishlistError) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    duration: Duration(seconds: 1),
+                    backgroundColor: Colors.redAccent,
+                    content: Text('Failed to remove from Wishlist'),
+                  ),
+                );
+              }
+            },
             buildWhen: (previous, current) =>
                 current is GetWishlistLoading ||
                 current is GetWishlistSuccess ||
                 current is GetWishlistError,
             builder: (context, state) {
               final isLoading = state is GetWishlistLoading;
+
+              if (state is GetWishlistError) {
+                return Center(
+                  child: Text(
+                    'Failed to load wishlist. Please try again.',
+                    style: TextStyle(
+                      fontFamily: 'DM Serif Display',
+                      fontSize: 16.sp,
+                      color: AppColors.primaryColor,
+                    ),
+                  ),
+                );
+              }
+
               final products = state is GetWishlistSuccess
                   ? state.products
-                  : _dummyProducts;
+                  : WishlistScreen._dummyProducts;
 
               if (state is GetWishlistSuccess && products.isEmpty) {
                 return Center(
@@ -56,19 +100,18 @@ class WishlistScreen extends StatelessWidget {
                 );
               }
 
+              final cubit = context.read<WishlistCubit>();
+
               return Skeletonizer(
                 enabled: isLoading,
                 child: ListView.separated(
                   itemCount: products.length,
-                  // ignore: unnecessary_underscores
-                  separatorBuilder: (_, __) => SizedBox(height: 16.h),
+                  separatorBuilder: (_, _) => SizedBox(height: 16.h),
                   itemBuilder: (context, index) => WishlistItemCard(
                     product: products[index],
                     onRemove: () {
                       if (products[index].id != null) {
-                        context.read<WishlistCubit>().removeFromWishlist(
-                          products[index].id!,
-                        );
+                        cubit.removeFromWishlist(products[index].id!);
                       }
                     },
                   ),

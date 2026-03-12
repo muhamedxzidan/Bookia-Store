@@ -8,9 +8,11 @@ class WishlistModel {
         : int.tryParse(json['status']?.toString() ?? '');
 
     final rawData = json['data'];
-    data = rawData is Map<String, dynamic>
-        ? WishlistData.fromJson(rawData)
-        : null;
+    if (rawData is Map<String, dynamic>) {
+      data = WishlistData.fromJson(rawData);
+    } else if (rawData is List) {
+      data = WishlistData.fromList(rawData);
+    }
   }
 
   WishlistData? data;
@@ -20,7 +22,15 @@ class WishlistModel {
 
 class WishlistData {
   WishlistData.fromJson(Map<String, dynamic> json) {
-    final rawProducts = json['products'];
+    final rawProducts = json['products'] ?? json['data'];
+    _parseProducts(rawProducts);
+  }
+
+  WishlistData.fromList(List<dynamic> list) {
+    _parseProducts(list);
+  }
+
+  void _parseProducts(dynamic rawProducts) {
     if (rawProducts is Iterable) {
       products = <BookProduct>[];
       for (final item in rawProducts) {

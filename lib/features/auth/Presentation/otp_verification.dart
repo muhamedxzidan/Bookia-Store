@@ -1,8 +1,6 @@
 import 'package:bookia_store/core/share_widgets/app_butoom.dart';
-import 'package:bookia_store/core/share_widgets/app_butoom_back.dart';
 import 'package:bookia_store/core/theme/app_colors.dart';
 import 'package:bookia_store/core/theme/app_strings.dart';
-import 'package:bookia_store/features/auth/Presentation/register_screen.dart';
 import 'package:bookia_store/features/auth/Presentation/widgest/otp_widget.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +17,6 @@ class OtpVerification extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const AppButtonBack(),
             SizedBox(height: 28.h),
             Text(
               AppStrings.otpVerification.tr(),
@@ -50,23 +47,23 @@ class OtpVerification extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Text(
+                  AppStrings.resendCode.tr(),
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    color: AppColors.hintTextDescriptionColor,
+                  ),
+                ),
                 TextButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      // ignore: inference_failure_on_instance_creation
-                      MaterialPageRoute(
-                        builder: (context) => const RegisterScreen(),
-                      ),
-                    );
+                    // TODO: implement resend OTP code logic
                   },
-                  child: Text(AppStrings.resendCode.tr()),
-                ),
-                Text(
-                  AppStrings.resendCodeNow.tr(),
-                  style: const TextStyle(
-                    color: AppColors.primaryColor,
-                    fontWeight: FontWeight.bold,
+                  child: Text(
+                    AppStrings.resendCodeNow.tr(),
+                    style: const TextStyle(
+                      color: AppColors.primaryColor,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ],

@@ -7,4 +7,6 @@ class Routes {
   static const String createNewPassword = '/create_new_password';
   static const String passwordChanged = '/password_changed';
   static const String bottomNavBar = '/bottom_nav_bar';
+  static const String bookDetails = '/book_details';
+  static const String wishlist = '/wishlist';
 }

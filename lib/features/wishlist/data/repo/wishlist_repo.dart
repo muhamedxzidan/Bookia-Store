@@ -7,7 +7,7 @@ class WishlistRepo {
   static Future<WishlistModel?> getWishlist() async {
     try {
       // ignore: inference_failure_on_function_invocation
-      final response = await DioHelper.dio.get(ApiConst.wishlistEndpoint);
+      final response = await DioHelper.dio.get(ApiConst.showWishlistEndpoint);
       if (response.statusCode == 200 && response.data != null) {
         return WishlistModel.fromJson(response.data as Map<String, dynamic>);
       } else {
@@ -27,9 +27,10 @@ class WishlistRepo {
         ApiConst.addToWishlistEndpoint,
         data: {'product_id': productId},
       );
-      return response.statusCode == 200;
+      final code = response.statusCode ?? 0;
+      return code >= 200 && code < 300;
     } catch (e) {
-      debugPrint(e.toString());
+      debugPrint('===> addToWishlist Error: $e');
       return false;
     }
   }
@@ -41,9 +42,10 @@ class WishlistRepo {
         ApiConst.removeFromWishlistEndpoint,
         data: {'product_id': productId},
       );
-      return response.statusCode == 200;
+      final code = response.statusCode ?? 0;
+      return code >= 200 && code < 300;
     } catch (e) {
-      debugPrint(e.toString());
+      debugPrint('===> removeFromWishlist Error: $e');
       return false;
     }
   }

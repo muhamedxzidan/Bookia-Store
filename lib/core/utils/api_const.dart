@@ -12,7 +12,7 @@ class ApiConst {
   static const String bestSellersEndPoint = '/products-bestseller';
 
   // Wishlist endpoints
-  static const String wishlistEndpoint = '/wishlist';
+  static const String showWishlistEndpoint = '/wishlist';
   static const String addToWishlistEndpoint = '/add-to-wishlist';
   static const String removeFromWishlistEndpoint = '/remove-from-wishlist';
 }

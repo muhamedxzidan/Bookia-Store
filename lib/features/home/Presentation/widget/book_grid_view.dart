@@ -13,7 +13,7 @@ class BookGridView extends StatelessWidget {
   const BookGridView({super.key});
 
   static final _dummyBooks = List.generate(
-    4,
+    10,
     (_) => BookProduct(id: 0, name: 'Book Title', price: '285', image: null),
   );
 
@@ -32,28 +32,28 @@ class BookGridView extends StatelessWidget {
       SizedBox(height: 10.h),
       BlocBuilder<HomeCubit, HomeState>(
         buildWhen: (previous, current) =>
-            current is GetBestSellerLoading ||
-            current is GetBestSellerSuccess ||
-            current is GetBestSellerError,
+            current is HomeLoading ||
+            current is HomeLoaded ||
+            current is HomeError,
         builder: (context, state) {
-          final isLoading = state is GetBestSellerLoading;
-          final books = state is GetBestSellerSuccess
-              ? state.bestSellers
-              : _dummyBooks;
+          final isLoading = state is HomeLoading || state is HomeInitial;
+          final books = state is HomeLoaded ? state.bestSellers : _dummyBooks;
 
           return Skeletonizer(
             enabled: isLoading,
             child: GridView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              itemCount: books.length,
+              itemCount: isLoading ? _dummyBooks.length : books.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: 12.h,
                 crossAxisSpacing: 12.w,
                 childAspectRatio: 0.58,
               ),
-              itemBuilder: (context, index) => BookCard(product: books[index]),
+              itemBuilder: (context, index) => BookCard(
+                product: isLoading ? _dummyBooks[index] : books[index],
+              ),
             ),
           );
         },

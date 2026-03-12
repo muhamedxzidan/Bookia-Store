@@ -21,3 +21,10 @@ final class RemoveFromWishlistLoading extends WishlistState {}
 final class RemoveFromWishlistSuccess extends WishlistState {}
 
 final class RemoveFromWishlistError extends WishlistState {}
+
+// Add to wishlist states
+final class AddToWishlistLoading extends WishlistState {}
+
+final class AddToWishlistSuccess extends WishlistState {}
+
+final class AddToWishlistError extends WishlistState {}

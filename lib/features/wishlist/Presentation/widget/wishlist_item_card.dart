@@ -1,3 +1,4 @@
+import 'package:bookia_store/core/routing/routes.dart';
 import 'package:bookia_store/core/theme/app_colors.dart';
 import 'package:bookia_store/features/home/data/models/best_seller_model.dart';
 import 'package:flutter/material.dart';
@@ -66,7 +67,7 @@ class WishlistItemCard extends StatelessWidget {
                 children: [
                   Text(
                     product.name ?? '',
-                    maxLines: 2,
+                    maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontFamily: 'DM Serif Display',
@@ -101,7 +102,13 @@ class WishlistItemCard extends StatelessWidget {
                               borderRadius: BorderRadius.circular(4.r),
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(
+                              context,
+                              Routes.bookDetails,
+                              arguments: product,
+                            );
+                          },
                           child: Text(
                             'View Details',
                             style: TextStyle(

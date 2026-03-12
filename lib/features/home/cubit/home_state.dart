@@ -5,22 +5,28 @@ sealed class HomeState {}
 
 final class HomeInitial extends HomeState {}
 
-final class GetHomeSliderError extends HomeState {}
+final class HomeLoading extends HomeState {}
 
-final class GetHomeSliderSuccess extends HomeState {
-  GetHomeSliderSuccess(this.sliders);
+final class HomeLoaded extends HomeState {
+  HomeLoaded({
+    required this.sliders,
+    required this.bestSellers,
+  });
+
   final List<SliderImage> sliders;
+  final List<BookProduct> bestSellers;
+
+  HomeLoaded copyWith({
+    List<SliderImage>? sliders,
+    List<BookProduct>? bestSellers,
+  }) =>
+      HomeLoaded(
+        sliders: sliders ?? this.sliders,
+        bestSellers: bestSellers ?? this.bestSellers,
+      );
 }
 
-// Best Seller States
-
-final class GetHomeSliderLoading extends HomeState {}
-
-final class GetBestSellerLoading extends HomeState {}
-
-final class GetBestSellerError extends HomeState {}
-
-final class GetBestSellerSuccess extends HomeState {
-  GetBestSellerSuccess(this.bestSellers);
-  final List<BookProduct> bestSellers;
+final class HomeError extends HomeState {
+  HomeError({required this.message});
+  final String message;
 }
