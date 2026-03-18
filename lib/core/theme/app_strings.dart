@@ -54,4 +54,8 @@ class AppStrings {
   static const String loading = 'loading';
   static const String addToCart = 'add_to_cart';
   static const String bookType = 'book_type';
+  static const String cartTotal = 'cart_total';
+  static const String checkout = 'checkout';
+  static const String cartEmpty = 'cart_empty';
+  static const String retry = 'retry';
 }

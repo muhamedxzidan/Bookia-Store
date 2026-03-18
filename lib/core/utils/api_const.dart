@@ -15,4 +15,10 @@ class ApiConst {
   static const String showWishlistEndpoint = '/wishlist';
   static const String addToWishlistEndpoint = '/add-to-wishlist';
   static const String removeFromWishlistEndpoint = '/remove-from-wishlist';
+
+  // Cart endpoints
+  static const String showCartEndpoint = '/cart';
+  static const String addToCartEndpoint = '/add-to-cart';
+  static const String removeFromCartEndpoint = '/remove-from-cart';
+  static const String updateCartEndpoint = '/update-cart';
 }

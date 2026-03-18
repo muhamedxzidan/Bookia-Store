@@ -1,4 +1,5 @@
 import 'package:bookia_store/core/utils/token_key_secuer.dart';
+import 'package:bookia_store/features/cart/cubit/cart_cubit.dart';
 import 'package:bookia_store/features/home/cubit/home_cubit.dart';
 import 'package:bookia_store/features/wishlist/cubit/wishlist_cubit.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -13,9 +14,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   final storage = const FlutterSecureStorage();
-  await storage.delete(
-    key: TokenKeySecuer.tokenKey,
-  ); // Remove the token for testing purposes
+  //await storage.delete(
+  //  key: TokenKeySecuer.tokenKey,
+  // ); // Remove the token for testing purposes
   final String token = await storage.read(key: TokenKeySecuer.tokenKey) ?? '';
 
   //final SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -24,7 +25,6 @@ void main() async {
   //); // Remove the token for testing purposes
   //final String token = prefs.getString(SharedPrefConst.tokenKey) ?? '';
 
-  //WidgetsFlutterBinding.ensureInitialized();
 
   runApp(
     MultiBlocProvider(
@@ -35,6 +35,7 @@ void main() async {
             ..getBestSellers(),
         ),
         BlocProvider(create: (_) => WishlistCubit()),
+        BlocProvider(create: (_) => CartCubit()),
       ],
       child: ScreenUtilInit(
         designSize: const Size(360, 690),

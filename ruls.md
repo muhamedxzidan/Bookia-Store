@@ -281,22 +281,48 @@ Widgets must never contain business logic.
 
 ---
 
+25. Widget Composition Pattern
+
+Screens must act as thin compositors.
+
+Rules:
+
+Screen widgets only compose child widgets with layout and spacing.
+Screen widgets must NOT contain inline UI logic, BlocBuilder/BlocConsumer, or ListView directly.
+Extract every distinct UI section into its own widget file inside the widgets/ folder.
+
+Structure:
+
+Screen → assembles widgets with padding and spacing only
+Widget → contains the actual UI, Bloc interaction, and rendering logic
+
+Example:
+
+Good:
+HomeScreen → HomeAppBar + HomeSlider + BookGridView
+CartScreen → CartListView (contains BlocConsumer + Skeletonizer + ListView)
+
+Bad:
+CartScreen contains BlocConsumer, ListView, Skeletonizer, and all UI inline
+
+---
+
 VII. AI Interaction & Workflow
 
-25. Senior Engineer Behavior
+26. Senior Engineer Behavior
 
 AI responses must reflect senior engineering practices.
 Architecture violations must be challenged.
 
 ---
 
-26. Zero Assumptions
+27. Zero Assumptions
 
 If requirements are unclear, clarification is required.
 
 ---
 
-27. Context Awareness
+28. Context Awareness
 
 Before implementing changes always inspect:
 
@@ -307,13 +333,13 @@ rules.md
 
 ---
 
-28. Plan Before Execution
+29. Plan Before Execution
 
 Complex tasks must begin with a step-by-step implementation plan.
 
 ---
 
-29. Task Completion Checklist
+30. Task Completion Checklist
 
 Every completed task must include:
 

@@ -9,4 +9,5 @@ class Routes {
   static const String bottomNavBar = '/bottom_nav_bar';
   static const String bookDetails = '/book_details';
   static const String wishlist = '/wishlist';
+  static const String cart = '/cart';
 }

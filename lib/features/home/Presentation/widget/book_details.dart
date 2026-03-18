@@ -1,5 +1,6 @@
 import 'package:bookia_store/core/theme/app_colors.dart';
 import 'package:bookia_store/core/theme/app_strings.dart';
+import 'package:bookia_store/features/cart/cubit/cart_cubit.dart';
 import 'package:bookia_store/features/home/data/models/best_seller_model.dart';
 import 'package:bookia_store/features/wishlist/cubit/wishlist_cubit.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -13,27 +14,51 @@ class BookDetails extends StatelessWidget {
   final BookProduct product;
 
   @override
-  Widget build(BuildContext context) =>
-      BlocListener<WishlistCubit, WishlistState>(
-        listener: (context, state) {
-          if (state is AddToWishlistSuccess) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                duration: Duration(seconds: 1),
-                backgroundColor: Colors.green,
-                content: Text('Added to Wishlist Successfully'),
-              ),
-            );
-          } else if (state is AddToWishlistError) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                duration: Duration(seconds: 1),
-                backgroundColor: Colors.redAccent,
-                content: Text('Failed to add to Wishlist'),
-              ),
-            );
-          }
-        },
+  Widget build(BuildContext context) => MultiBlocListener(
+        listeners: [
+          BlocListener<WishlistCubit, WishlistState>(
+            listener: (context, state) {
+              if (state is AddToWishlistSuccess) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    duration: Duration(seconds: 1),
+                    backgroundColor: Colors.green,
+                    content: Text('Added to Wishlist Successfully'),
+                  ),
+                );
+              } else if (state is AddToWishlistError) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    duration: Duration(seconds: 1),
+                    backgroundColor: Colors.redAccent,
+                    content: Text('Failed to add to Wishlist'),
+                  ),
+                );
+              }
+            },
+          ),
+          BlocListener<CartCubit, CartState>(
+            listener: (context, state) {
+              if (state is AddToCartSuccess) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    duration: Duration(seconds: 1),
+                    backgroundColor: Colors.green,
+                    content: Text('Added to Cart Successfully'),
+                  ),
+                );
+              } else if (state is AddToCartError) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    duration: const Duration(seconds: 1),
+                    backgroundColor: Colors.redAccent,
+                    content: Text(state.message),
+                  ),
+                );
+              }
+            },
+          ),
+        ],
         child: Scaffold(
           backgroundColor: Colors.white,
           appBar: AppBar(
@@ -139,25 +164,52 @@ class BookDetails extends StatelessWidget {
                     ),
                     SizedBox(width: 24.w),
                     Expanded(
-                      child: InkWell(
-                        onTap: () {},
-                        borderRadius: BorderRadius.circular(8.r),
-                        child: Container(
-                          alignment: Alignment.center,
-                          padding: EdgeInsets.symmetric(vertical: 14.h),
-                          decoration: BoxDecoration(
-                            color: AppColors.darkTextColor,
+                      child: BlocBuilder<CartCubit, CartState>(
+                        buildWhen: (previous, current) =>
+                            current is AddToCartLoading ||
+                            current is AddToCartSuccess ||
+                            current is AddToCartError,
+                        builder: (context, state) {
+                          final isLoading = state is AddToCartLoading;
+                          return InkWell(
+                            onTap: isLoading
+                                ? null
+                                : () {
+                                    if (product.id == null) return;
+                                    context
+                                        .read<CartCubit>()
+                                        .addToCart(product.id!);
+                                  },
                             borderRadius: BorderRadius.circular(8.r),
-                          ),
-                          child: Text(
-                            AppStrings.addToCart.tr(),
-                            style: TextStyle(
-                              fontFamily: 'DM Serif Display',
-                              fontSize: 20.sp,
-                              color: Colors.white,
+                            child: Container(
+                              alignment: Alignment.center,
+                              padding: EdgeInsets.symmetric(vertical: 14.h),
+                              decoration: BoxDecoration(
+                                color: isLoading
+                                    ? AppColors.darkTextColor.withOpacity(0.6)
+                                    : AppColors.darkTextColor,
+                                borderRadius: BorderRadius.circular(8.r),
+                              ),
+                              child: isLoading
+                                  ? SizedBox(
+                                      height: 24.h,
+                                      width: 24.w,
+                                      child: const CircularProgressIndicator(
+                                        color: Colors.white,
+                                        strokeWidth: 2,
+                                      ),
+                                    )
+                                  : Text(
+                                      AppStrings.addToCart.tr(),
+                                      style: TextStyle(
+                                        fontFamily: 'DM Serif Display',
+                                        fontSize: 20.sp,
+                                        color: Colors.white,
+                                      ),
+                                    ),
                             ),
-                          ),
-                        ),
+                          );
+                        },
                       ),
                     ),
                   ],
