@@ -2,8 +2,20 @@ import 'package:bookia_store/core/share_widgets/app_text_form_fild.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SearchScreen extends StatelessWidget {
-  SearchScreen({super.key});
+class SearchScreen extends StatefulWidget {
+  const SearchScreen({super.key});
+
+  @override
+  State<SearchScreen> createState() => _SearchScreenState();
+}
+
+class _SearchScreenState extends State<SearchScreen> {
+  @override
+  void dispose() {
+    searchController.dispose();
+    super.dispose();
+  }
+
   final TextEditingController searchController = TextEditingController();
 
   @override
@@ -17,7 +29,7 @@ class SearchScreen extends StatelessWidget {
             controller: searchController,
             hintText: "search",
             onChanged: (text) {
-              print(text);
+              debugPrint(text);
             },
           ),
         ],

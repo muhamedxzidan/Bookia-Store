@@ -1,6 +1,5 @@
 import 'package:bookia_store/core/routing/routes.dart';
 import 'package:bookia_store/core/utils/assets.gen.dart';
-import 'package:bookia_store/features/search/search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
