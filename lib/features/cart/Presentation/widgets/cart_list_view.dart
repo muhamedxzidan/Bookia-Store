@@ -111,7 +111,7 @@ class CartListView extends StatelessWidget {
               child: ListView.separated(
                 padding: EdgeInsets.zero,
                 itemCount: cartItems.length,
-                separatorBuilder: (_, __) => Divider(
+                separatorBuilder: (_, _) => Divider(
                   height: 16.h,
                   thickness: 1,
                   color: AppColors.dividerColor,

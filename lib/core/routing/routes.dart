@@ -10,4 +10,5 @@ class Routes {
   static const String bookDetails = '/book_details';
   static const String wishlist = '/wishlist';
   static const String cart = '/cart';
+  static const String search = '/search';
 }

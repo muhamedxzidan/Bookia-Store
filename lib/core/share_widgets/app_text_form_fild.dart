@@ -10,6 +10,7 @@ class AppTextFormFild extends StatefulWidget {
     this.color,
     this.isPassword = false,
     this.controller,
+    this.onChanged,
   });
 
   final String hintText;
@@ -17,6 +18,7 @@ class AppTextFormFild extends StatefulWidget {
   final Color? color;
   final bool isPassword;
   final TextEditingController? controller;
+  final void Function(String)? onChanged;
 
   @override
   State<AppTextFormFild> createState() => _AppTextFormFildState();
@@ -26,6 +28,7 @@ class _AppTextFormFildState extends State<AppTextFormFild> {
   bool obscureText = true;
   @override
   Widget build(BuildContext context) => TextFormField(
+    onChanged: widget.onChanged,
     controller: widget.controller,
     keyboardType: widget.isPassword
         ? TextInputType.visiblePassword
