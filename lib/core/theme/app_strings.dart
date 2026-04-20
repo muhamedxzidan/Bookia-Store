@@ -58,4 +58,12 @@ class AppStrings {
   static const String checkout = 'checkout';
   static const String cartEmpty = 'cart_empty';
   static const String retry = 'retry';
+  static const String profileMyWishlist = 'profile_my_wishlist';
+  static const String profileMyCart = 'profile_my_cart';
+  static const String profileLanguage = 'profile_language';
+  static const String profileLogout = 'profile_logout';
+  static const String profileLogoutConfirmTitle = 'profile_logout_confirm_title';
+  static const String profileLogoutConfirmMessage =
+      'profile_logout_confirm_message';
+  static const String cancel = 'cancel';
 }

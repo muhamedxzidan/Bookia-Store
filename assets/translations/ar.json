@@ -46,5 +46,12 @@
   "cart_total": "الإجمالي:",
   "checkout": "إتمام الشراء",
   "cart_empty": "سلة التسوق فارغة",
-  "retry": "إعادة المحاولة"
+  "retry": "إعادة المحاولة",
+  "profile_my_wishlist": "قائمة الأمنيات",
+  "profile_my_cart": "سلة التسوق",
+  "profile_language": "اللغة",
+  "profile_logout": "تسجيل الخروج",
+  "profile_logout_confirm_title": "تسجيل الخروج",
+  "profile_logout_confirm_message": "هل أنت متأكد من تسجيل الخروج؟",
+  "cancel": "إلغاء"
 }

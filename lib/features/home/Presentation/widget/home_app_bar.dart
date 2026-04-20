@@ -11,12 +11,14 @@ class HomeAppBar extends StatelessWidget {
   Widget build(BuildContext context) => Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
-      Row(
-        children: [
-          SvgPicture.asset(Assets.icons.logo, width: 24.w, height: 24.h),
+      Flexible(
+        child: Row(
+          children: [
+            SvgPicture.asset(Assets.icons.logo, width: 24.w, height: 24.h),
 
-          SizedBox(width: 7.w),
-        ],
+            SizedBox(width: 7.w),
+          ],
+        ),
       ),
       InkWell(
         onTap: () {

@@ -11,6 +11,7 @@ import 'package:bookia_store/features/cart/Presentation/cart_screen.dart';
 import 'package:bookia_store/features/home/Presentation/home_screen.dart';
 import 'package:bookia_store/features/home/Presentation/widget/book_details.dart';
 import 'package:bookia_store/features/home/data/models/best_seller_model.dart';
+import 'package:bookia_store/features/search/cubit/search_cubit.dart';
 import 'package:bookia_store/features/search/search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -50,7 +51,12 @@ class AppRoutes {
       case Routes.cart:
         return MaterialPageRoute(builder: (_) => const CartScreen());
       case Routes.search:
-        return MaterialPageRoute(builder: (_) => const SearchScreen());
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (_) => SearchCubit(),
+            child: const SearchScreen(),
+          ),
+        );
 
       default:
         return MaterialPageRoute(builder: (_) => const HomeScreen());

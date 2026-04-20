@@ -1,6 +1,7 @@
 import 'package:bookia_store/core/utils/token_key_secuer.dart';
 import 'package:bookia_store/features/cart/cubit/cart_cubit.dart';
 import 'package:bookia_store/features/home/cubit/home_cubit.dart';
+import 'package:bookia_store/features/profile/cubit/profile_cubit.dart';
 import 'package:bookia_store/features/wishlist/cubit/wishlist_cubit.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:bookia_store/bookia_store.dart';
@@ -36,6 +37,7 @@ void main() async {
         ),
         BlocProvider(create: (_) => WishlistCubit()),
         BlocProvider(create: (_) => CartCubit()),
+        BlocProvider(create: (_) => ProfileCubit()),
       ],
       child: ScreenUtilInit(
         designSize: const Size(360, 690),

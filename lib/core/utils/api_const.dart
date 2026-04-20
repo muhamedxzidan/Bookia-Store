@@ -21,4 +21,11 @@ class ApiConst {
   static const String addToCartEndpoint = '/add-to-cart';
   static const String removeFromCartEndpoint = '/remove-from-cart';
   static const String updateCartEndpoint = '/update-cart';
+  //search endpoints
+  static const String searchEndpoint = '/products-search';
+  // profile
+
+  static const String showprofileEndpoint = '/profile';
+  
+  
 }
